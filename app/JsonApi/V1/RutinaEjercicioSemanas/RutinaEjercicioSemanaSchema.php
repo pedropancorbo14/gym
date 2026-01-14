@@ -23,6 +23,9 @@ class RutinaEjercicioSemanaSchema extends Schema
      */
     public static string $model = RutinaEjercicioSemana::class;
 
+    public static string $resourceType = 'rutina_ejercicio_semanas';
+
+
     /**
      * Get the resource fields.
      *

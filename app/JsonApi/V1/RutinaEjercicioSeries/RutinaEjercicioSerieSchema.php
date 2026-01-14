@@ -1,8 +1,8 @@
 <?php
 
-namespace App\JsonApi\V1\RutinaEjercicios;
+namespace App\JsonApi\V1\RutinaEjercicioSeries;
 
-use App\Models\RutinaEjercicio;
+use App\Models\RutinaEjercicioSerie;
 use Illuminate\Support\Str;
 use LaravelJsonApi\Eloquent\Contracts\Paginator;
 use LaravelJsonApi\Eloquent\Fields\DateTime;
@@ -12,7 +12,7 @@ use LaravelJsonApi\Eloquent\Filters\WhereIdIn;
 use LaravelJsonApi\Eloquent\Pagination\PagePagination;
 use LaravelJsonApi\Eloquent\Schema;
 
-class RutinaEjercicioSchema extends Schema
+class RutinaEjercicioSerieSchema extends Schema
 {
 
     /**
@@ -20,11 +20,9 @@ class RutinaEjercicioSchema extends Schema
      *
      * @var string
      */
-    public static string $model = RutinaEjercicio::class;
+    public static string $model = RutinaEjercicioSerie::class;
 
-    public static string $resourceType = 'rutina_ejercicios';
-
-
+    public static string $resourceType = 'rutina_ejercicio_series';
     /**
      * Get the resource fields.
      *
@@ -35,15 +33,13 @@ class RutinaEjercicioSchema extends Schema
         return [
             ID::make(),
 
-            Str::make('rutinaId')->sortable(),
-            Str::make('ejercicioId')->sortable(),
-            Str::make('orden')->sortable(),
-            Str::make('seriesObjetivo')->sortable(),
-            Str::make('repsObjetivo')->sortable(),
-            Str::make('descansoSegundosObjetivo')->sortable(),
+            Str::make('rutinaEjercicioSemanaId')->sortable(),
+            Str::make('numeroSerie')->sortable(),
+            Str::make('repeticiones')->sortable(),
+            Str::make('pesoKg')->sortable(),
+            Str::make('descansoSegundos')->sortable(),
 
-            BelongsTo::make('rutina'),
-            BelongsTo::make('ejercicio'),
+            BelongsTo::make('rutinaEjercicioSemana'),
 
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),
