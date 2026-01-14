@@ -40,7 +40,7 @@ class RutinaEjercicioSerieResource extends JsonApiResource
     public function relationships($request): iterable
     {
         return [
-            // @TODO
+            'rutinaEjercicioSemana' => $this->relation('rutinaEjercicioSemana')->showDataIfLoaded(),
         ];
     }
 }

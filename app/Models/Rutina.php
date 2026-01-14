@@ -10,7 +10,6 @@ use Illuminate\Testing\Fluent\Concerns\Has;
 
 class Rutina extends Model
 {
-
     use HasFactory;
 
     protected $table = 'rutinas';

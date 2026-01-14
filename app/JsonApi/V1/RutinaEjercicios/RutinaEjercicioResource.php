@@ -21,8 +21,6 @@ class RutinaEjercicioResource extends JsonApiResource
     public function attributes($request): iterable
     {
         return [
-            'rutinaId' => $this->resource->rutina_id,
-            'ejercicioId' => $this->resource->ejercicio_id,
             'orden' => $this->resource->orden,
             'seriesObjetivo' => $this->resource->series_objetivo,
             'repsObjetivo' => $this->resource->reps_objetivo,
@@ -41,7 +39,8 @@ class RutinaEjercicioResource extends JsonApiResource
     public function relationships($request): iterable
     {
         return [
-            // @TODO
+            'rutina' => $this->relation('rutina')->showDataIfLoaded(),
+            'ejercicio' => $this->relation('ejercicio')->showDataIfLoaded(),
         ];
     }
 }

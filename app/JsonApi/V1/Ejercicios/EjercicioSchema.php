@@ -3,7 +3,7 @@
 namespace App\JsonApi\V1\Ejercicios;
 
 use App\Models\Ejercicio;
-use Illuminate\Support\Str;
+use LaravelJsonApi\Eloquent\Fields\Str;
 use LaravelJsonApi\Eloquent\Contracts\Paginator;
 use LaravelJsonApi\Eloquent\Fields\DateTime;
 use LaravelJsonApi\Eloquent\Fields\ID;
@@ -36,9 +36,9 @@ class EjercicioSchema extends Schema
         return [
             ID::make(),
 
-            Str::make('nombre')->sortable()->rules('required', 'max:255'),
-            Str::make('grupo_muscular')->sortable()->rules('required', 'max:255'),
-            Str::make('descripcion')->sortable()->rules('nullable'),
+            Str::make('nombre')->sortable(),
+            Str::make('grupo_muscular')->sortable(),
+            Str::make('descripcion')->sortable(),
 
             BelongsToMany::make('rutinas'),
             HasMany::make('plantillaRutinas'),

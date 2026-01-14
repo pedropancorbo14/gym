@@ -3,7 +3,7 @@
 namespace App\JsonApi\V1\RutinaEjercicioSeries;
 
 use App\Models\RutinaEjercicioSerie;
-use Illuminate\Support\Str;
+use LaravelJsonApi\Eloquent\Fields\Str;
 use LaravelJsonApi\Eloquent\Contracts\Paginator;
 use LaravelJsonApi\Eloquent\Fields\DateTime;
 use LaravelJsonApi\Eloquent\Fields\ID;
@@ -22,7 +22,7 @@ class RutinaEjercicioSerieSchema extends Schema
      */
     public static string $model = RutinaEjercicioSerie::class;
 
-    public static string $resourceType = 'rutina_ejercicio_series';
+    public static string $resourceType = 'rutina-ejercicio-series';
     /**
      * Get the resource fields.
      *

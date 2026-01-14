@@ -21,7 +21,7 @@ class SemanaEntrenamientoSchema extends Schema
      */
     public static string $model = SemanaEntrenamiento::class;
 
-    public static string $resourceType = 'semana_entrenamientos';
+    public static string $resourceType = 'semana-entrenamientos';
 
     /**
      * Get the resource fields.

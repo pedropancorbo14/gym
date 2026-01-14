@@ -38,7 +38,9 @@ class EjercicioResource extends JsonApiResource
     public function relationships($request): iterable
     {
         return [
-            // @TODO
+            'rutinas' => $this->relation('rutinas')->showDataIfLoaded(),
+            'plantillaRutinas' => $this->relation('plantillaRutinas')->showDataIfLoaded(),
+            'registrosSemanales' => $this->relation('registrosSemanales')->showDataIfLoaded(),
         ];
     }
 }

@@ -34,6 +34,10 @@ class Server extends BaseServer
         return [
             Rutinas\RutinaSchema::class,
             Ejercicios\EjercicioSchema::class,
+            RutinaEjercicios\RutinaEjercicioSchema::class,
+            RutinaEjercicioSemanas\RutinaEjercicioSemanaSchema::class,
+            RutinaEjercicioSeries\RutinaEjercicioSerieSchema::class,
+            SemanaEntrenamientos\SemanaEntrenamientoSchema::class,
         ];
     }
 }

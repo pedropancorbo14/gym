@@ -6,10 +6,12 @@ use App\Models\Rutina;
 use LaravelJsonApi\Eloquent\Contracts\Paginator;
 use LaravelJsonApi\Eloquent\Fields\DateTime;
 use LaravelJsonApi\Eloquent\Fields\ID;
+use LaravelJsonApi\Eloquent\Fields\Relations\BelongsToMany;
 use LaravelJsonApi\Eloquent\Filters\WhereIdIn;
 use LaravelJsonApi\Eloquent\Pagination\PagePagination;
 use LaravelJsonApi\Eloquent\Schema;
 use LaravelJsonApi\Eloquent\Fields\Str;
+use LaravelJsonApi\Eloquent\Fields\Relations\HasMany;
 
 class RutinaSchema extends Schema
 {
@@ -37,6 +39,9 @@ class RutinaSchema extends Schema
             Str::make('descripcion')->sortable(),
             Str::make('dia_semana')->sortable(),
 
+            BelongsToMany::make('ejercicios')->type('ejercicios'),
+            HasMany::make('plantillaEjercicios')->type('rutina-ejercicios'),
+            HasMany::make('registrosSemanales')->type('rutina-ejercicio-semanas'),
 
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),

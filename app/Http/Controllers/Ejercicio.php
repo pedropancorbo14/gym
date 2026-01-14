@@ -18,5 +18,4 @@ class Ejercicio extends Controller
     use Actions\UpdateRelationship;
     use Actions\AttachRelationship;
     use Actions\DetachRelationship;
-
 }

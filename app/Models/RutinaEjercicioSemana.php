@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class RutinaEjercicioSemana extends Model
 {
+    use HasFactory;
+
     protected $table = 'rutina_ejercicio_semanas';
 
     protected $fillable = [
