@@ -2,7 +2,6 @@
 
 namespace App\JsonApi\V1\Ejercicios;
 
-use Illuminate\Validation\Rule;
 use LaravelJsonApi\Laravel\Http\Requests\ResourceRequest;
 use LaravelJsonApi\Validation\Rule as JsonApiRule;
 
@@ -20,6 +19,9 @@ class EjercicioRequest extends ResourceRequest
             'nombre' => ['required', 'max:255'],
             'grupo_muscular' => ['required', 'max:255'],
             'descripcion' => ['nullable'],
+            'rutinas' => JsonApiRule::toMany(),
+            'plantillaRutinas' => JsonApiRule::toMany(),
+            'registrosSemanales' => JsonApiRule::toMany(),
         ];
     }
 }

@@ -7,9 +7,12 @@ use Illuminate\Support\Str;
 use LaravelJsonApi\Eloquent\Contracts\Paginator;
 use LaravelJsonApi\Eloquent\Fields\DateTime;
 use LaravelJsonApi\Eloquent\Fields\ID;
+use LaravelJsonApi\Eloquent\Fields\Relations\BelongsToMany;
+use LaravelJsonApi\Eloquent\Filters\Has;
 use LaravelJsonApi\Eloquent\Filters\WhereIdIn;
 use LaravelJsonApi\Eloquent\Pagination\PagePagination;
 use LaravelJsonApi\Eloquent\Schema;
+use LaravelJsonApi\Eloquent\Fields\Relations\HasMany;
 
 class EjercicioSchema extends Schema
 {
@@ -36,6 +39,10 @@ class EjercicioSchema extends Schema
             Str::make('nombre')->sortable()->rules('required', 'max:255'),
             Str::make('grupo_muscular')->sortable()->rules('required', 'max:255'),
             Str::make('descripcion')->sortable()->rules('nullable'),
+
+            BelongsToMany::make('rutinas'),
+            HasMany::make('plantillaRutinas'),
+            HasMany::make('registrosSemanales'),
 
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),
