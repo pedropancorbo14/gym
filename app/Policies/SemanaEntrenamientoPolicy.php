@@ -62,4 +62,9 @@ class SemanaEntrenamientoPolicy
     {
         return true;
     }
+
+    public function viewRegistrosEjercicios(User $user, SemanaEntrenamiento $semana): bool
+    {
+        return true;
+    }
 }

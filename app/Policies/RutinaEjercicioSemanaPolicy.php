@@ -62,4 +62,21 @@ class RutinaEjercicioSemanaPolicy
     {
         return true;
     }
+
+    public function viewRutina(User $user, RutinaEjercicioSemana $rutina): bool
+    {
+        return true;
+    }
+    public function viewEjercicio(User $user, RutinaEjercicioSemana $rutina): bool
+    {
+        return true;
+    }
+    public function viewSemanaEntrenamiento(User $user, RutinaEjercicioSemana $rutina): bool
+    {
+        return true;
+    }
+    public function viewSeries(User $user, RutinaEjercicioSemana $rutina): bool
+    {
+        return true;
+    }
 }

@@ -62,4 +62,18 @@ class RutinaPolicy
     {
         return true;
     }
+
+    public function viewRegistrosSemanales(User $user, Rutina $rutina): bool
+    {
+        return true;
+    }
+
+    public function viewPlantillaEjercicios(User $user, Rutina $rutina): bool
+    {
+        return true;
+    }
+    public function viewEjercicios(User $user, Rutina $rutina): bool
+    {
+        return true;
+    }
 }

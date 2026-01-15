@@ -62,4 +62,9 @@ class RutinaEjercicioSeriePolicy
     {
         return true;
     }
+
+    public function viewRutinaEjercicioSemana(User $user, RutinaEjercicioSerie $rutina): bool
+    {
+        return true;
+    }
 }
