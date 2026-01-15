@@ -21,8 +21,8 @@ class SemanaEntrenamientoResource extends JsonApiResource
     public function attributes($request): iterable
     {
         return [
-            'fechaInicio' => $this->resource->fecha_inicio,
-            'fechaFin' => $this->resource->fecha_fin,
+            'fecha_inicio' => $this->resource->fecha_inicio,
+            'fecha_fin' => $this->resource->fecha_fin,
             'createdAt' => $this->resource->created_at,
             'updatedAt' => $this->resource->updated_at,
         ];

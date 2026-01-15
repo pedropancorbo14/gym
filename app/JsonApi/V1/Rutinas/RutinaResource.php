@@ -23,7 +23,7 @@ class RutinaResource extends JsonApiResource
         return [
             'nombre' => $this->resource->nombre,
             'descripcion' => $this->resource->descripcion,
-            'diaSemana' => $this->resource->dia_semana,
+            'dia_semana' => $this->resource->dia_semana,
             'createdAt' => $this->resource->created_at,
             'updatedAt' => $this->resource->updated_at,
         ];

@@ -22,9 +22,9 @@ class RutinaEjercicioResource extends JsonApiResource
     {
         return [
             'orden' => $this->resource->orden,
-            'seriesObjetivo' => $this->resource->series_objetivo,
-            'repsObjetivo' => $this->resource->reps_objetivo,
-            'descansoSegundosObjetivo' => $this->resource->descanso_segundos_objetivo,
+            'series_objetivo' => $this->resource->series_objetivo,
+            'reps_objetivo' => $this->resource->reps_objetivo,
+            'descanso_segundos_objetivo' => $this->resource->descanso_segundos_objetivo,
             'createdAt' => $this->resource->created_at,
             'updatedAt' => $this->resource->updated_at,
         ];

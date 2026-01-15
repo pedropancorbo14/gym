@@ -17,12 +17,12 @@ class RutinaEjercicioRequest extends ResourceRequest
     public function rules(): array
     {
         return [
-            'ejercicio_id' => ['required', Rule::exists('ejercicios', 'id')],
-            'rutina_id' => ['required', Rule::exists('rutinas', 'id')],
+            'rutinaId' => ['required', 'integer', 'exists:rutinas,id'],
+            'ejercicioId' => ['required', 'integer', 'exists:ejercicios,id'],
             'orden' => ['required', 'integer', 'min:1'],
-            'series_objetivo' => ['required', 'integer', 'min:1'],
-            'reps_objetivo' => ['required', 'integer', 'min:1'],
-            'descanso_segundos_objetivo' => ['required', 'integer', 'min:0'],
+            'seriesObjetivo' => ['required', 'integer', 'min:1'],
+            'repsObjetivo' => ['required', 'integer', 'min:1'],
+            'descansoSegundosObjetivo' => ['required', 'integer', 'min:0'],
         ];
     }
 }

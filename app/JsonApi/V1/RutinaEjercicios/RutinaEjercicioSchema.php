@@ -37,6 +37,7 @@ class RutinaEjercicioSchema extends Schema
 
             Str::make('rutinaId')->sortable(),
             Str::make('ejercicioId')->sortable(),
+
             Str::make('orden')->sortable(),
             Str::make('seriesObjetivo')->sortable(),
             Str::make('repsObjetivo')->sortable(),

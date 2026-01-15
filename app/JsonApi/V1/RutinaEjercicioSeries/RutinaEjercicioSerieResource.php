@@ -21,11 +21,10 @@ class RutinaEjercicioSerieResource extends JsonApiResource
     public function attributes($request): iterable
     {
         return [
-            'rutinaEjercicioSemanaId' => $this->resource->rutina_ejercicio_semana_id,
-            'numeroSerie' => $this->resource->numero_serie,
+            'numero_serie' => $this->resource->numero_serie,
             'repeticiones' => $this->resource->repeticiones,
-            'pesoKg' => $this->resource->peso_kg,
-            'descansoSegundos' => $this->resource->descanso_segundos,
+            'peso_kg' => $this->resource->peso_kg,
+            'descanso_segundos' => $this->resource->descanso_segundos,
             'createdAt' => $this->resource->created_at,
             'updatedAt' => $this->resource->updated_at,
         ];
