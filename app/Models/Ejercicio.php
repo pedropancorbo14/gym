@@ -33,12 +33,12 @@ class Ejercicio extends Model
             ->withTimestamps();
     }
 
-    public function plantillaRutinas(): HasMany
+    public function rutinaEjercicios(): HasMany
     {
         return $this->hasMany(RutinaEjercicio::class, 'ejercicio_id');
     }
 
-    public function registrosSemanales(): HasMany
+    public function rutinaEjercicioSemanas(): HasMany
     {
         return $this->hasMany(RutinaEjercicioSemana::class, 'ejercicio_id');
     }

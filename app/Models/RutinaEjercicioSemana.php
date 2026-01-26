@@ -41,12 +41,12 @@ class RutinaEjercicioSemana extends Model
         return $this->belongsTo(Ejercicio::class, 'ejercicio_id');
     }
 
-    public function semana(): BelongsTo
+    public function semanaEntrenamiento(): BelongsTo
     {
         return $this->belongsTo(SemanaEntrenamiento::class, 'semana_entrenamiento_id');
     }
 
-    public function series(): HasMany
+    public function rutinaEjercicioSeries(): HasMany
     {
         return $this->hasMany(RutinaEjercicioSerie::class, 'rutina_ejercicio_semana_id')
             ->orderBy('numero_serie');

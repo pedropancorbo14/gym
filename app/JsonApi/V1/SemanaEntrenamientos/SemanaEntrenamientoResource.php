@@ -37,7 +37,7 @@ class SemanaEntrenamientoResource extends JsonApiResource
     public function relationships($request): iterable
     {
         return [
-            'registrosEjercicios' => $this->relation('registrosEjercicios')->showDataIfLoaded(),
+            'rutinaEjercicioSemanas' => $this->relation('rutinaEjercicioSemanas')->showDataIfLoaded(),
         ];
     }
 }

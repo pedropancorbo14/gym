@@ -33,12 +33,12 @@ class Rutina extends Model
             ->orderBy('pivot_orden');
     }
 
-    public function plantillaEjercicios(): HasMany
+    public function rutinaEjercicios(): HasMany
     {
         return $this->hasMany(RutinaEjercicio::class, 'rutina_id');
     }
 
-    public function registrosSemanales(): HasMany
+    public function rutinaEjercicioSemanas(): HasMany
     {
         return $this->hasMany(RutinaEjercicioSemana::class, 'rutina_id');
     }

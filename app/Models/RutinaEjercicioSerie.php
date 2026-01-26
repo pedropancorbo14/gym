@@ -27,7 +27,7 @@ class RutinaEjercicioSerie extends Model
         'descanso_segundos' => 'integer',
     ];
 
-    public function registroSemanal(): BelongsTo
+    public function rutinaEjercicioSemana(): BelongsTo
     {
         return $this->belongsTo(RutinaEjercicioSemana::class, 'rutina_ejercicio_semana_id');
     }

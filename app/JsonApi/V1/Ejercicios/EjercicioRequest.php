@@ -20,8 +20,8 @@ class EjercicioRequest extends ResourceRequest
             'grupo_muscular' => ['required', 'max:255'],
             'descripcion' => ['nullable'],
             'rutinas' => JsonApiRule::toMany(),
-            'plantillaRutinas' => JsonApiRule::toMany(),
-            'registrosSemanales' => JsonApiRule::toMany(),
+            'rutinaEjercicios' => JsonApiRule::toMany(),
+            'rutinaEjercicioSemanas' => JsonApiRule::toMany(),
         ];
     }
 }

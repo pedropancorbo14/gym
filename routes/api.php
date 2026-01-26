@@ -30,14 +30,14 @@ Route::middleware('auth:sanctum')->group(function () {
             $server->resource('rutinas', RutinaController::class)
                 ->relationships(function ($relations) {
                     $relations->hasMany('ejercicios');
-                    $relations->hasMany('plantillaEjercicios');
-                    $relations->hasMany('registrosSemanales');
+                    $relations->hasMany('rutinaEjercicios');
+                    $relations->hasMany('rutinaEjercicioSemanas');
                 });
             $server->resource('ejercicios', Ejercicio::class)
                 ->relationships(function ($relations) {
                     $relations->hasMany('rutinas');
-                    $relations->hasMany('plantillaRutinas');
-                    $relations->hasMany('registrosSemanales');
+                    $relations->hasMany('rutinaEjercicios');
+                    $relations->hasMany('rutinaEjercicioSemanas');
                 });
             $server->resource('rutina-ejercicios', RutinaEjercicio::class)
                 ->relationships(function ($relations) {
@@ -49,7 +49,7 @@ Route::middleware('auth:sanctum')->group(function () {
                     $relations->hasOne('rutina');
                     $relations->hasOne('ejercicio');
                     $relations->hasOne('semanaEntrenamiento');
-                    $relations->hasMany('series');
+                    $relations->hasMany('rutinaEjercicioSeries');
                 });
             $server->resource('rutina-ejercicio-series', RutinaEjercicioSerie::class)
                 ->relationships(function ($relations) {
@@ -57,7 +57,7 @@ Route::middleware('auth:sanctum')->group(function () {
                 });
             $server->resource('semana-entrenamientos', SemanaEntrenamiento::class)
                 ->relationships(function ($relations) {
-                    $relations->hasMany('registrosEjercicios');
+                    $relations->hasMany('rutinaEjercicioSemanas');
                 });
         });
 });

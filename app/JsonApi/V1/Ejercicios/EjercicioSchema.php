@@ -41,8 +41,8 @@ class EjercicioSchema extends Schema
             Str::make('descripcion')->sortable(),
 
             BelongsToMany::make('rutinas'),
-            HasMany::make('plantillaRutinas'),
-            HasMany::make('registrosSemanales'),
+            HasMany::make('rutinaEjercicios')->type('rutina-ejercicios'),
+            HasMany::make('rutinaEjercicioSemanas')->type('rutina-ejercicio-semanas'),
 
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),

@@ -39,7 +39,7 @@ class RutinaEjercicioSerieSchema extends Schema
             Str::make('pesoKg')->sortable(),
             Str::make('descansoSegundos')->sortable(),
 
-            BelongsTo::make('rutinaEjercicioSemana'),
+            BelongsTo::make('rutinaEjercicioSemana')->type('rutina-ejercicio-semanas'),
 
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),

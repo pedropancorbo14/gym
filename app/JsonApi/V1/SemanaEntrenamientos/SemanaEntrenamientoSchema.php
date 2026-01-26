@@ -36,7 +36,7 @@ class SemanaEntrenamientoSchema extends Schema
             DateTime::make('fechaInicio')->sortable(),
             DateTime::make('fechaFin')->sortable(),
 
-            HasMany::make('registrosEjercicios'),
+            HasMany::make('rutinaEjercicioSemanas')->type('rutina-ejercicio-semanas'),
 
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),

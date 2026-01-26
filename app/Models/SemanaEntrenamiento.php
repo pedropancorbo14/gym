@@ -22,7 +22,7 @@ class SemanaEntrenamiento extends Model
         'fecha_fin' => 'date',
     ];
 
-    public function registrosEjercicios(): HasMany
+    public function rutinaEjercicioSemanas(): HasMany
     {
         return $this->hasMany(RutinaEjercicioSemana::class, 'semana_entrenamiento_id');
     }

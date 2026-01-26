@@ -43,7 +43,7 @@ class RutinaEjercicioSemanaResource extends JsonApiResource
             'rutina' => $this->relation('rutina')->showDataIfLoaded(),
             'ejercicio' => $this->relation('ejercicio')->showDataIfLoaded(),
             'semanaEntrenamiento' => $this->relation('semanaEntrenamiento')->showDataIfLoaded(),
-            'series' => $this->relation('series')->showDataIfLoaded(),
+            'rutinaEjercicioSeries' => $this->relation('rutinaEjercicioSeries')->showDataIfLoaded(),
         ];
     }
 }

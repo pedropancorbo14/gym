@@ -40,8 +40,8 @@ class RutinaSchema extends Schema
             Str::make('dia_semana')->sortable(),
 
             BelongsToMany::make('ejercicios')->type('ejercicios'),
-            HasMany::make('plantillaEjercicios')->type('rutina-ejercicios'),
-            HasMany::make('registrosSemanales')->type('rutina-ejercicio-semanas'),
+            HasMany::make('rutinaEjercicios')->type('rutina-ejercicios'),
+            HasMany::make('rutinaEjercicioSemanas')->type('rutina-ejercicio-semanas'),
 
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),

@@ -43,8 +43,8 @@ class RutinaEjercicioSchema extends Schema
             Str::make('repsObjetivo')->sortable(),
             Str::make('descansoSegundosObjetivo')->sortable(),
 
-            BelongsTo::make('rutina'),
-            BelongsTo::make('ejercicio'),
+            BelongsTo::make('rutina')->type('rutinas'),
+            BelongsTo::make('ejercicio')->type('ejercicios'),
 
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),

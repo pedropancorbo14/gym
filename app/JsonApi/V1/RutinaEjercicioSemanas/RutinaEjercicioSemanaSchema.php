@@ -45,10 +45,10 @@ class RutinaEjercicioSemanaSchema extends Schema
             Str::make('descansoSegundosReal')->sortable(),
             Str::make('notas')->sortable(),
 
-            BelongsTo::make('rutina'),
-            BelongsTo::make('ejercicio'),
-            BelongsTo::make('semanaEntrenamiento'),
-            HasMany::make('series'),
+            BelongsTo::make('rutina')->type('rutinas'),
+            BelongsTo::make('ejercicio')->type('ejercicios'),
+            BelongsTo::make('semanaEntrenamiento')->type('semana-entrenamientos'),
+            HasMany::make('rutinaEjercicioSeries')->type('rutina-ejercicio-series'),
 
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),
