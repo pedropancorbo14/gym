@@ -15,5 +15,11 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        //
+        $exceptions->dontReport(
+            \LaravelJsonApi\Core\Exceptions\JsonApiException::class,
+        );
+
+        $exceptions->render(
+            \LaravelJsonApi\Exceptions\ExceptionParser::renderer(),
+        );
     })->create();
