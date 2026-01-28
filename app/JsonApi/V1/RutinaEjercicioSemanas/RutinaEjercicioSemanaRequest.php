@@ -17,9 +17,9 @@ class RutinaEjercicioSemanaRequest extends ResourceRequest
     public function rules(): array
     {
         return [
-            'rutinaId' => ['required', 'string', Rule::exists('rutinas')],
-            'ejercicioId' => ['required', 'string', Rule::exists('ejercicios')],
-            'semanaEntrenamientoId' => ['required', 'string', Rule::exists('semana-entrenamientos')],
+            'rutinaId' => ['required', 'string', 'exists:rutinas,id'],
+            'ejercicioId' => ['required', 'string', 'exists:ejercicios,id'],
+            'semanaEntrenamientoId' => ['required', 'string', 'exists:semanas_entrenamiento,id'],
             'seriesRealizadas' => ['nullable', 'integer', 'min:0'],
             'repsRealizadas' => ['nullable', 'integer', 'min:0'],
             'pesoKg' => ['nullable', 'numeric', 'min:0'],

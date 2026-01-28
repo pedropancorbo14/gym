@@ -22,7 +22,7 @@ class EjercicioResource extends JsonApiResource
     {
         return [
             'nombre' => $this->resource->nombre,
-            'grupo_muscular' => $this->resource->grupo_muscular,
+            'grupoMuscular' => $this->resource->grupo_muscular,
             'descripcion' => $this->resource->descripcion,
             'createdAt' => $this->resource->created_at,
             'updatedAt' => $this->resource->updated_at,

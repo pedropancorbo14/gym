@@ -37,7 +37,7 @@ class EjercicioSchema extends Schema
             ID::make(),
 
             Str::make('nombre')->sortable(),
-            Str::make('grupo_muscular')->sortable(),
+            Str::make('grupoMuscular')->sortable(),
             Str::make('descripcion')->sortable(),
 
             BelongsToMany::make('rutinas'),

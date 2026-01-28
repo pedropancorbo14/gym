@@ -17,7 +17,7 @@ class RutinaEjercicioSerieRequest extends ResourceRequest
     public function rules(): array
     {
         return [
-            'rutinaEjercicioSemanaId' => ['required', Rule::exists('rutina-ejercicio-semanas', 'id')],
+            'rutinaEjercicioSemanaId' => ['required', 'exists:rutina_ejercicio_semanas,id'],
             'numeroSerie' => ['required', 'integer', 'min:1'],
             'repeticiones' => ['required', 'integer', 'min:1'],
             'pesoKg' => ['required', 'numeric', 'min:0'],
